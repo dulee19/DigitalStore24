@@ -1,0 +1,197 @@
+:root {
+    --bg-golden: #AD8D49;
+    --bg-black: #000;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start !important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-bold {
+    font-weight: 800;
+}
+
+.relative {
+    position: relative;
+}
+
+/* Margins */
+.my-1 {
+    margin-block: 1rem;
+}
+
+.my-2 {
+    margin-block: 2rem;
+}
+
+.my-3 {
+    margin-block: 3rem;
+}
+
+.my-4 {
+    margin-block: 4rem;
+}
+
+.my-5 {
+    margin-block: 5rem;
+}
+
+.mt-1 {
+    margin-block-start: 1rem;
+}
+
+.mt-2 {
+    margin-block-start: 2rem;
+}
+
+.mx-auto {
+    margin-inline: auto;
+}
+
+.text-xl {
+    font-size: clamp(30px, 4.5vw, 60px);
+}
+
+.text-md {
+    font-size: clamp(18px, 3.5vw, 25px);
+}
+
+.lh-base {
+    line-height: 1;
+}
+
+.lh-medium {
+    line-height: 1.3;
+}
+
+/* Paddings */
+.py-1 {
+    padding-block: 1rem;
+}
+
+.py-2 {
+    padding-block: 2rem;
+}
+
+.py-3 {
+    padding-block: 3rem;
+}
+
+.py-4 {
+    padding-block: 4rem;
+}
+
+.py-5 {
+    padding-block: 5rem;
+}
+
+.px-1 {
+    padding-inline: 1rem;
+}
+
+.px-2 {
+    padding-inline: 2rem;
+}
+
+.px-3 {
+    padding-inline: 3rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Gap */
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.gap-4 {
+    gap: 4rem;
+}
+
+.gap-5 {
+    gap: 5rem;
+}
+
+.object-cover {
+    object-fit: cover;
+}
