@@ -1,0 +1,84 @@
+:root {
+    --accordion-bg: #F8F8F8;
+    --accordion-color: #333;
+    --accordion-border: #CCC;
+    --accordion-active: #006632;
+    --accordion-focus-hover: #EAEAEA;
+    --icon-color: #333;
+    --transition-speed: .3s;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src:
+        local("Helvetica"),
+        url("./fonts/HelveticaNeue-Roman.otf") format("opentype");
+}
+
+body {
+    font-family: Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding-inline: 2rem;
+}
+
+.accordion-item {
+    border-block-end: 1px solid var(--accordion-border);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accordion-bg);
+    color: var(--accordion-color);
+    font-size: 1rem;
+    width: 100%;
+    text-align: start;
+    padding: 1rem;
+    border: 0;
+    cursor: pointer;
+    transition: background var(--transition-speed) ease-in-out;
+    outline: none;
+}
+
+.accordion-header:is(:hover, :focus) {
+    background: var(--accordion-focus-hover);
+}
+
+.accordion-header[aria-expanded="true"] {
+    color: var(--accordion-active);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding-inline: 1rem;
+    transition: max-height var(--transition-speed) ease;
+}
+
+.accordion-content p {
+    margin-block: 1rem;
+}
+
+.accordion-header .icon {
+    color: var(--icon-color);
+    font-size: 2rem;
+}
