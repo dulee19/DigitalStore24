@@ -52,9 +52,16 @@
 .text-center {
     text-align: center;
 }
+.text-start {
+    text-align: start;
+}
 
 .text-white {
     color: #fff;
+}
+
+.bg-black-500 {
+    background-color: var(--bg-black);
 }
 
 .text-end {
@@ -113,13 +120,32 @@
 .mt-2 {
     margin-block-start: 2rem;
 }
+.mt-3 {
+    margin-block-start: 3rem;
+}
+.mt-4 {
+    margin-block-start: 4rem;
+}
+.mt-5 {
+    margin-block-start: 5rem;
+}
+
+.max-width-24ch {
+    max-width: 24ch;
+}
+.max-width-70ch {
+    max-width: 70ch;
+}
+.max-width-90ch {
+    max-width: 90ch;
+}
 
 .mx-auto {
     margin-inline: auto;
 }
 
 .text-xl {
-    font-size: clamp(30px, 4.5vw, 60px);
+    font-size: clamp(24px, 4.5vw, 60px);
 }
 
 .text-md {
@@ -157,6 +183,9 @@
 
 .px-1 {
     padding-inline: 1rem;
+}
+.px-1-5 {
+    padding-inline: 1.5rem;
 }
 
 .px-2 {

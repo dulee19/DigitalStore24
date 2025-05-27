@@ -39,17 +39,16 @@ img {
 }
 
 .container {
-    max-width: 1120px;
+    max-width: 1200px;
     margin-inline: auto;
-    padding-inline: clamp(2rem, 4.5vw, 1.5rem);
+    padding-inline: clamp(1rem, 4.5vw, 1.5rem);
 }
 
 /* Header */
 header {
-    background: url('./images/hero.png') no-repeat center center / cover;
+    background: url('./images/hero.webp') no-repeat center center / cover;
     min-height: 95dvh;
     min-height: 95vh;
-    padding-block: 1rem;
 }
 
 .logo img {
@@ -73,7 +72,7 @@ section:not(#dinner, #tickets) {
     padding-block: 5rem;
 }
 
-/* Sections */
+/* SECTIONS */
 
 /* Digisphere Section */
 .digisphere,
@@ -88,17 +87,12 @@ section:not(#dinner, #tickets) {
 }
 
 .digisphere-content {
-    max-width: 66ch;
+    max-width: 77ch;
     margin-inline: auto;
 }
 
 .digisphere-main-content:not(:last-child) {
-    margin-block-end: 3rem;
-}
-
-.digisphere-main-content:not(:first-child) h2 {
-    max-width: 24ch;
-    margin-inline: auto;
+    margin-block-end: 4rem;
 }
 
 .digisphere-content p:not(:last-child) {
@@ -108,7 +102,7 @@ section:not(#dinner, #tickets) {
 .border-b-2 {
     border: 2px solid #fff;
     display: inline-block;
-    width: 200px;
+    min-width: 200px;
 }
 
 /* Dinner Section */
@@ -116,13 +110,19 @@ section:not(#dinner, #tickets) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
+.dinner-wrapper h2 {
+    font-size: clamp(24px, 4.5vw, 42px);
+    line-height: normal;
+}
+.dinner-wrapper p {
+    font-size: clamp(16px, 4.5vw, 17px);
+}
 
 .dinner-wrapper img {
     height: 38rem;
-    object-fit: cover;
 }
 
-/* Join Us */
+/* Join Us Section */
 #join-us {
     background: linear-gradient(to left, rgba(0, 0, 0, 0) 8%, rgba(140, 121, 75, 1) 100%),
         url('./images/join-us.png');
@@ -140,20 +140,16 @@ section:not(#dinner, #tickets) {
 
 #join-us h3 {
     font-size: clamp(24px, 4.5vw, 42px);
+    max-width: 30ch;
 }
 
 #join-us p {
     font-size: clamp(16px, 4.5vw, 18px);
+    max-width: 55ch;
 }
 
-/* Tickets */
-#tickets {
-    background-color: var(--bg-black);
-    display: block;
-    width: 100%;
-}
 
-/* Event Details */
+/* Event Details Section */
 .border-b-1 {
     border: 1px solid #fff;
     display: inline-block;
@@ -161,12 +157,16 @@ section:not(#dinner, #tickets) {
 }
 
 .event-details-info {
-    max-width: 24ch;
+    max-width: 26ch;
+}
+.event-details-info span:first-child {
+    letter-spacing: .1rem;
 }
 
 .event-details-content img {
-    max-height: 30px;
+    height: 30px;
     margin-block-start: .5rem;
+    object-fit: contain;
 }
 
 .event-details-inner {
@@ -174,18 +174,43 @@ section:not(#dinner, #tickets) {
     grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
 }
 
-.event-details-content>* {
+.event-details-content > * {
     word-wrap: break-word;
 }
 
-#host {
-    background-color: var(--bg-black);
+/* Host Section */
+#host .border-r {
+    border-inline-end: 1px solid #fff;
+}
+
+/* Speedland Section */
+#speedland {
+    background: url('./images/speedland.png') no-repeat center center / cover;
+    height: 55dvh;
+    height: 55vh;
+}
+
+#speedland h2 {
+  font-size: clamp(32px, 4.5vw, 80px);
+  background: url('./images/speedland.png') no-repeat center center / cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+  mix-blend-mode: screen;
+  filter: brightness(1.8) contrast(1.2);
+}
+
+#speedland button {
+    background-color: var(--bg-golden);
+    padding: .75rem 1.2rem;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 992px) {
-    .header-content div>p {
-        max-width: 34ch;
+    .header-content div > p {
+        max-width: 45ch;
     }
 
     header::before {
@@ -198,8 +223,20 @@ section:not(#dinner, #tickets) {
         z-index: -1;
     }
 
+    .dinner-main div:not(:last-child) {
+        max-width: 57ch;
+        margin-inline: auto;
+    }
+    .dinner-second div:not(:first-child) {
+        max-width: 57ch;
+        margin-inline: auto;
+    }
+
     .justify-md-end {
         justify-content: flex-end;
+    }
+    .px-md-3 {
+        padding-inline: 3rem;
     }
 }
 
@@ -212,15 +249,38 @@ section:not(#dinner, #tickets) {
     .dinner-wrapper img {
         height: auto;
     }
+    .host-content {
+        flex-direction: column;
+        gap: 2rem !important;
+    }
+    
+    #host .border-r {
+        border-inline-end: none;
+        border-block-end: 1px solid #fff;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .justify-sm-end {
         justify-content: flex-end;
     }
+    .text-sm-center {
+        text-align: center;
+    }
+    .digisphere-main-content:not(:first-child) h2 {
+        max-width: 24ch;
+        margin-inline: auto;
+    }
+    .mx-sm-auto {
+        margin-inline: auto;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .logo img {
+        max-height: 30px;
+    }
     .event-details-inner {
         grid-template-columns: 1fr;
     }
