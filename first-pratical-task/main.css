@@ -333,11 +333,13 @@ section:not(#dinner, #tickets) {
         max-height: 30px;
     }
 
-    .event-details-inner {
-        grid-template-columns: 1fr;
-    }
-
     #mc_embed_signup_scroll {
         padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .event-details-inner {
+        grid-template-columns: 1fr;
     }
 }

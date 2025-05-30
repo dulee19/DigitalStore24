@@ -156,11 +156,11 @@
 }
 
 .text-xl {
-    font-size: clamp(24px, 4.5vw, 60px);
+    font-size: clamp(24px, 3.5vw, 60px);
 }
 
 .text-md {
-    font-size: clamp(18px, 3.5vw, 25px);
+    font-size: clamp(16px, 3.5vw, 25px);
 }
 
 .lh-base {
